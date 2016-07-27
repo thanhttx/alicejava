@@ -3,7 +3,7 @@ public static void main(String[] args) throws InterruptedException, ExecutionExc
 		ExecutorService service = Executors.newFixedThreadPool(50);
 		for(int i = 0; i <100;i++){
 			
-			//Complete all task -> System.out.println("complete");
+			//Thread MAIN waiting Complete all task -> System.out.println("complete");
 			/*Future<Integer> future = service.submit(new Callable<Integer>() {
 
 				@Override
@@ -12,7 +12,7 @@ public static void main(String[] args) throws InterruptedException, ExecutionExc
 				}
 			});
 			System.out.println(future.get());*/
-			//Not complete all task -> System.out.println("complete");
+			//Thread MAIN not waiting complete all task -> System.out.println("complete");
 			service.execute(new Runnable() {
 				
 				@Override
