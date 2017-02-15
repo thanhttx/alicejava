@@ -3,3 +3,10 @@ System.out.println(x.replaceAll("(?<=t)h", "0"));
 System.out.println(x.split("(?<=n)h"));
 
 Regex bỏ tìm tất cả từ h sau từ t
+
+
+------------Regex replace start-end String
+Ex : 
+String x = "thanh";
+System.out.println(x.replaceAll("^", "9")); -- 9thanh
+System.out.println(x.replaceAll("$", "9")); -- thanh9
