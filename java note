@@ -18,13 +18,16 @@ Run main method
 Java load class at runtime
 Ex  Ex: project abc D:/user/../Desktop/a/B.class (className of B.class is a.B.class)
 	ClassLoader cld = URLClassLoader.newInstance(new URL[] {new File("D:/user/../Desktop").toURI().toURL()});
-	Class<?> clazz = Class.forName("a.B", true, cld);
+	//Class<?> clazz = Class.forName("a.B", true, cld);
+	Class<?> clazz = cld.loadClass("a.B");
 	clazz.getDeclaredMethod("print").invoke(clazz.newInstance());
 Ex  Ex: jar abc D:/user/../Desktop/abc.jar!/a.B (className of B.class is a.B.class)
 	ClassLoader cld = URLClassLoader.newInstance(new URL[] {new File("D:/user/../Desktop/abc.jar").toURI().toURL()});
-	Class<?> clazz = Class.forName("a.B", true, cld);
+	//Class<?> clazz = Class.forName("a.B", true, cld);
+	Class<?> clazz = cld.loadClass("a.B");
 	clazz.getDeclaredMethod("print").invoke(clazz.newInstance());
 Ex  Ex: compress abc D:/user/../Desktop/abc.zip!/a.B (className of B.class is a.B.class)
 	ClassLoader cld = URLClassLoader.newInstance(new URL[] {new File("D:/user/../Desktop/abc.zip").toURI().toURL()});
-	Class<?> clazz = Class.forName("a.B", true, cld);
+	//Class<?> clazz = Class.forName("a.B", true, cld);
+	Class<?> clazz = cld.loadClass("a.B");
 	clazz.getDeclaredMethod("print").invoke(clazz.newInstance());	
