@@ -1,0 +1,16 @@
+run java by command line:
+compile class
+->
+  Ex D:/abc/src/a/A.class
+  javac D:/abc/src/a/A.class
+
+Run main method
+->class file.
+  Ex: project abc D:/abc/src/a/A.class (className of A.class is a.A.class)
+  java -classpath D:/abc/src A
+->jar file
+  Ex D:/abc.jar!/a/A.class (className of A.class is a.A.class)
+  java -classpath D:/abc.jar A
+->compress file
+  Ex D:/abc.zip!/a/A.class (className of A.class is a.A.class)
+  java -classpath D:/abc.zip A
