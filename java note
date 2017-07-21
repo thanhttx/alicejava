@@ -14,3 +14,9 @@ Run main method
 ->compress file
   Ex D:/abc.zip!/a/A.class (className of A.class is a.A.class)
   java -classpath D:/abc.zip A
+  
+Java load class at runtime
+Ex  Ex: project abc D:/user/../Desktop/a/B.class (className of B.class is a.B.class)
+    ClassLoader cld = URLClassLoader.newInstance(new URL[] {new File("D:/user/../Desktop").toURI().toURL()});
+		Class<?> clazz = Class.forName("a.B", true, cld);
+		clazz.getDeclaredMethod("print").invoke(clazz.newInstance());
