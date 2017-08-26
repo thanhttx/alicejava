@@ -8,10 +8,10 @@ Call async: in "call", start new thread.
 In java, not redefind constructor, and not use method as arguments of method, not as javascript.
 
 In java, can force main thread waiting child thread finish by wait and notify.
-    synchronized (check) {
-			check.wait();
-			System.out.println("Finish!");
-		}
-    synchronized (check) {
-      check.notifyAll();		
-    }
+	synchronized (check) {
+		check.wait();
+		System.out.println("Finish!");
+	}
+	synchronized (check) {
+		check.notifyAll();		
+	}
