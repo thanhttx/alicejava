@@ -1,0 +1,8 @@
+CallBack help get values after call method.
+How it work?
+In method "call", provider object must be override method of this object (normal abstract method
+and has parameter is value return of "call").
+This methods have been call in "call" with arguments are value return of "call".
+
+Call async: in "call", start new thread.
+In java, not redefind constructor, and not use method as arguments of method, not as javascript.
